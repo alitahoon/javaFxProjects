@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="departmentPane" prefHeight="700.0" prefWidth="1235.0" style="-fx-background-color: #2f2b43;" stylesheets="@../CSS/table0.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.departmentViewController">
+   <children>
+      <AnchorPane fx:id="childPane" layoutY="-700.0" prefHeight="700.0" prefWidth="1235.0">
+         <children>
+            <TableView fx:id="tblDepartmentInfo" layoutX="41.0" layoutY="134.0" prefHeight="566.0" prefWidth="1174.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="134.0">
+              <columns>
+                  <TableColumn fx:id="id" maxWidth="250.0" minWidth="245.0" prefWidth="-1.0" text="ID" />
+                <TableColumn fx:id="name" maxWidth="250.0" minWidth="245.0" prefWidth="-1.0" text="Name" />
+                <TableColumn fx:id="manName" maxWidth="250.0" minWidth="245.0" prefWidth="-1.0" text="Manger Name" />
+                  <TableColumn fx:id="manAssitName" maxWidth="250.0" minWidth="245.0" prefWidth="-1.0" text="Manager Assitant Name" />
+                  <TableColumn fx:id="numOfBeds" maxWidth="250.0" minWidth="179.0" prefWidth="188.0" text="Number Of Beds" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" layoutX="131.0" layoutY="14.0" spacing="50.0">
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="totalDep" text="2546" textFill="#ff00ed">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label text="Total Departments" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="totalManagers" text="2205" textFill="#00e0ff">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label text="Total Mangers" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="totalManagerAssit" text="458" textFill="#fa2d67">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label text="Total Mangers Assitent" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="totalBeds" text="668" textFill="#23d335">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label text="Total Number Of Beds" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

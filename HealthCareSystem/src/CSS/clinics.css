@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#departmentPane{
+    -fx-background-color: white;
+}
+#txtName,#txtID,#closeTime,#openTime,#ticketPrise{
+    -fx-background-color: none;
+    -fx-border-width: 0px 0px 3px 0px;
+    -fx-border-color: white;
+    -fx-text-fill:  white;
+    -fx-prompt-text-fill: #fa426a;
+}

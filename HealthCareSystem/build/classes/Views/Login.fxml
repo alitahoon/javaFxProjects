@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginPageController">
+   <children>
+      <AnchorPane fx:id="imagePane" prefHeight="720.0" prefWidth="600.0" style="-fx-background-color: #2f2b43;">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="100.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Logooo.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="141.0" layoutY="622.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Healthy Care System">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="32.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginPage" layoutX="600.0" prefHeight="720.0" prefWidth="600.0" style="-fx-background-color: #423d53;">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="198.0" layoutY="310.0" prefHeight="30.0" prefWidth="300.0" promptText="Username" style="-fx-background-color: none; -fx-text-fill: white; -fx-border-width: 0px 0px 3px 0px; -fx-border-color: white;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="txtPassword" layoutX="198.0" layoutY="380.0" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-background-color: none; -fx-text-fill: white; -fx-border-width: 0px 0px 3px 0px; -fx-border-color: white;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </PasswordField>
+            <FontAwesomeIconView fill="#fa2d59" glyphName="USER" layoutX="144.0" layoutY="342.0" size="35" />
+            <FontAwesomeIconView fill="#fa2d59" glyphName="KEY" layoutX="138.0" layoutY="412.0" size="35" />
+            <FontAwesomeIconView fill="#fa2d59" glyphName="USERS" layoutX="312.0" layoutY="221.0" size="60" />
+            <Button fx:id="btnLogin" layoutX="215.0" layoutY="448.0" mnemonicParsing="false" onMouseClicked="#checkLoginInfo" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #Fa2C56;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fill="WHITE" layoutX="285.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Here">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnRegister" layoutX="365.0" layoutY="448.0" mnemonicParsing="false" onMouseClicked="#HandleRegisterButton" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #146893;" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Hyperlink layoutX="279.0" layoutY="507.0" lineSpacing="5.0" text="Forget Password ?" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Microsoft JhengHei" size="16.0" />
+               </font>
+            </Hyperlink>
+            <FontAwesomeIconView fill="#fa2d59" glyphName="CLOSE" layoutX="558.0" layoutY="44.0" onMouseClicked="#getClose" size="40">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+/*.HBox:hover{
+    -fx-border-color: red;
+    -fx-border-style: solid;
+    -fx-border-width: 0px 0px 0px 50px;
+}*/
+/*#drag:hover{
+    -fx-background-image: url("../images/moveHover.png.png");
+    -fx-background-size: cover;
+}*/
+#search{
+    -fx-background-color: #072227;
+    -fx-border-color: #072227;
+}
+#searchKey{
+    -fx-background-color: white;
+    -fx-background-reduis:0px;
+}
+#imgView{
+    -fx-background-color: white;
+    -fx-border-width: 0px 0px 0px 0px;
+}
+#sep{
+    -fx-background-color: #072227;
+}
+

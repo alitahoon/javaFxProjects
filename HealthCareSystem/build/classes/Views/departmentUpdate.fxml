@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="departmentPane" prefHeight="700.0" prefWidth="1325.0" style="-fx-background-color: #2f2b43;" stylesheets="@../CSS/table0.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.departmentUpdateController">
+   <children>
+      <AnchorPane fx:id="childPane" layoutX="-1245.0" layoutY="42.0" prefHeight="635.0" prefWidth="1245.0" stylesheets="@../CSS/department.css">
+         <children>
+            <TableView fx:id="tblDepartmentInfo" layoutX="58.0" layoutY="267.0" onMouseClicked="#handleLoadData" prefHeight="368.0" prefWidth="1165.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="267.0">
+              <columns>
+                  <TableColumn fx:id="id" maxWidth="250.0" minWidth="190.0" prefWidth="190.0" text="ID" />
+                <TableColumn fx:id="name" maxWidth="300.0" minWidth="245.0" prefWidth="300.0" text="Name" />
+                <TableColumn fx:id="manName" maxWidth="250.0" minWidth="208.0" prefWidth="237.0" text="Manger Name" />
+                  <TableColumn fx:id="manAssitName" maxWidth="282.0" minWidth="245.0" prefWidth="253.0" text="Manager Assitant Name" />
+                  <TableColumn fx:id="numOfBeds" maxWidth="320.0" minWidth="172.0" prefWidth="180.0" text="Number Of Beds" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" layoutX="53.0" layoutY="119.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/depManger.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtManagerName" prefHeight="35.0" prefWidth="250.0" promptText="Department Manager">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="60.0" layoutY="45.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Name.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtName" prefHeight="35.0" prefWidth="250.0" promptText="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="57.0" layoutY="188.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/ID.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtID" editable="false" prefHeight="35.0" prefWidth="250.0" promptText="ID">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="417.0" layoutY="117.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Beds.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtBedsNum" prefHeight="35.0" prefWidth="250.0" promptText="Beds Number">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button fx:id="btnUpdate" layoutX="820.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#handleUpdateButton" prefHeight="30.0" prefWidth="120.0" text="Update">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClear" layoutX="820.0" layoutY="118.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="Clear">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Button>
+            <HBox alignment="CENTER" layoutX="417.0" layoutY="41.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/assistManger.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtMangerAssitant" prefHeight="35.0" prefWidth="250.0" promptText="Manager Assitant">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

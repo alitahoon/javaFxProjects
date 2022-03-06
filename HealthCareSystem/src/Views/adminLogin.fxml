@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="admin" prefHeight="720.0" prefWidth="600.0" style="-fx-background-color: #423d53;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.adminPageController">
+   <children>
+      <AnchorPane fx:id="adminComponent" layoutX="-1212.0" prefHeight="720.0" prefWidth="600.0" style="-fx-background-color: #423d53;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1212.0" AnchorPane.rightAnchor="1212.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FontAwesomeIconView fill="#fa2d59" glyphName="CLOSE" layoutX="554.0" layoutY="47.0" onMouseClicked="#getClose" size="40">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <VBox layoutX="96.0" layoutY="137.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <FontAwesomeIconView fill="#fa2d59" glyphName="USER" size="35" />
+                        <TextField fx:id="txtnewusername" prefHeight="30.0" prefWidth="300.0" promptText="Username" style="-fx-background-color: none; -fx-text-fill: white; -fx-border-width: 0px 0px 3px 0px; -fx-border-color: white;">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <FontAwesomeIconView fill="#fa2d59" glyphName="KEY" size="35" />
+                        <PasswordField fx:id="txtnewpassword" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-background-color: none; -fx-text-fill: white; -fx-border-width: 0px 0px 3px 0px; -fx-border-color: white;">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/showPassword.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <FontAwesomeIconView fill="#fa2d59" glyphName="KEY" size="35" />
+                        <PasswordField fx:id="txtconfirmnewpassword" prefHeight="30.0" prefWidth="300.0" promptText="Confirm Password" style="-fx-background-color: none; -fx-text-fill: white; -fx-border-width: 0px 0px 3px 0px; -fx-border-color: white;">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/showPassword.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <FontAwesomeIconView fill="#fa2d59" glyphName="USER" size="35" />
+                        <TextField fx:id="txtAdminUsername" prefHeight="30.0" prefWidth="300.0" promptText="Admin Username" style="-fx-background-color: none; -fx-text-fill: white; -fx-border-width: 0px 0px 3px 0px; -fx-border-color: white;">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="94.0" prefWidth="384.0" spacing="20.0">
+                     <children>
+                        <FontAwesomeIconView fill="#fa2d59" glyphName="KEY" size="35" />
+                        <PasswordField fx:id="txtAdminPassword" prefHeight="30.0" prefWidth="300.0" promptText="Admin Password" style="-fx-background-color: none; -fx-text-fill: white; -fx-border-width: 0px 0px 3px 0px; -fx-border-color: white;">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/showPassword.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <FontAwesomeIconView fill="#fa2d59" glyphName="USERS" layoutX="260.0" layoutY="67.0" size="40" text="" />
+            <Text fill="WHITE" layoutX="222.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new user">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnAdd" layoutX="221.0" layoutY="631.0" mnemonicParsing="false" onMouseClicked="#HandleAddButton" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #146893;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="26.0" layoutY="18.0" onMouseClicked="#HandleBackButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/backLogo.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

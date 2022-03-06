@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1366.0" style="-fx-background-color: #694e4e;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="92.0" prefHeight="90.0" prefWidth="1366.0" spacing="40.0" style="-fx-background-color: #886f6f;">
+         <children>
+            <HBox alignment="CENTER" maxHeight="90.0" prefHeight="90.0" prefWidth="120.0" spacing="15.0">
+               <children>
+                  <VBox fx:id="container" alignment="CENTER_LEFT" disable="true" onMouseClicked="#handlePaneMouseReleased" prefHeight="73.0" prefWidth="31.0" spacing="8.0">
+                     <children>
+                        <Pane prefHeight="3.0" style="-fx-background-color: white;" />
+                        <Pane fx:id="pan" prefHeight="3.0" style="-fx-background-color: white;" />
+                        <Pane prefHeight="3.0" style="-fx-background-color: white;" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <Text fill="#f3c5c5" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <Button contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: none;" text="Doctors" textFill="#f3c5c5">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#Released" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Doctors.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: none;" text="Departments" textFill="#f3c5c5">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Departments.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: none;" text="Nurses" textFill="#f3c5c5">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Nurse.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: none;" text="Drags" textFill="#f3c5c5">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Drags.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: none;" text="Staff" textFill="#f3c5c5">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Staff.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: none;" text="Patients" textFill="#f3c5c5">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/creatPatient.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: none;" text="Clinics" textFill="#f3c5c5">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Clinics.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="328.0" layoutY="-4.0" />
+      <VBox fx:id="docMenu" alignment="TOP_CENTER" layoutY="90.0" prefHeight="350.0" prefWidth="120.0" spacing="30.0" style="-fx-background-color: #886f6f;">
+         <children>
+            <Button mnemonicParsing="false" prefWidth="120.0" style="-fx-background-color: none;" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/View-person.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefWidth="120.0" style="-fx-background-color: none;" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user-add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefWidth="120.0" style="-fx-background-color: none;" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user-delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefWidth="120.0" style="-fx-background-color: none;" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/update-person.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="depMenu" alignment="TOP_CENTER" layoutX="-250.0" layoutY="70.0" prefHeight="350.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="View" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Insert" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="nurMenu" alignment="TOP_CENTER" layoutX="-250.0" layoutY="80.0" prefHeight="350.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="View" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Insert" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="graMenu" alignment="TOP_CENTER" layoutX="-250.0" layoutY="80.0" prefHeight="350.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="View" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Insert" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="staMenu" alignment="TOP_CENTER" layoutX="-250.0" layoutY="80.0" prefHeight="350.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="View" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Insert" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="patMenu" alignment="TOP_CENTER" layoutX="-250.0" layoutY="70.0" prefHeight="350.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: #0598ff;" AnchorPane.bottomAnchor="369.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="View" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Insert" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1278.0" layoutY="713.0" onMouseClicked="#getClose" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Exit.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <HBox fx:id="search" alignment="CENTER" layoutX="220.0" layoutY="114.0" maxHeight="30.0" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="searchKey" prefHeight="30.0" prefWidth="200.0">
+               <font>
+                  <Font name="SansSerif Regular" size="16.0" />
+               </font>
+            </TextField>
+            <Separator orientation="VERTICAL" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

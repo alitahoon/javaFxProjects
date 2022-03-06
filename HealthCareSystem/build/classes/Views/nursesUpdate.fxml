@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="departmentPane" prefHeight="635.0" prefWidth="1235.0" style="-fx-background-color: #2f2b43;" stylesheets="@../CSS/table0.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.nursesUpdateController">
+   <children>
+      <AnchorPane fx:id="childPane" layoutX="-1235.0" layoutY="7.0" prefHeight="700.0" prefWidth="1235.0" stylesheets="@../CSS/doctor.css">
+         <children>
+            <VBox prefWidth="200.0" spacing="50.0" />
+            <VBox prefWidth="200.0" spacing="50.0" />
+            <VBox prefWidth="200.0" spacing="50.0" />
+            <HBox alignment="CENTER" layoutX="101.0" layoutY="62.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Name.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtName" prefHeight="35.0" prefWidth="250.0" promptText="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="477.0" layoutY="160.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" onMouseClicked="#getTimePickerForEndShift" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Date&amp;Time.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtShiftEnd" prefHeight="35.0" prefWidth="250.0" promptText="Shift End">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="101.0" layoutY="162.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" onMouseClicked="#getTimePickerForStartShift" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Date&amp;Time.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtShiftStart" prefHeight="35.0" prefWidth="250.0" promptText="Shift Start">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="477.0" layoutY="60.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Prise.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtSalary" prefHeight="35.0" prefWidth="250.0" promptText="Salary">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="841.0" layoutY="76.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/ID.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtID" editable="false" prefHeight="35.0" prefWidth="250.0" promptText="ID">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="100.0" layoutY="250.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Departments.png" />
+                     </image>
+                  </ImageView>
+                  <ComboBox fx:id="cmpDepartment" prefHeight="35.0" prefWidth="250.0" stylesheets="@../CSS/compoBoxStyle.css" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="840.0" layoutY="161.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Address.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtAddress" prefHeight="35.0" prefWidth="250.0" promptText="Address">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="844.0" layoutY="238.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Grade.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtGrade" prefHeight="35.0" prefWidth="250.0" promptText="Grade">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="101.0" layoutY="329.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Doctors.png" />
+                     </image>
+                  </ImageView>
+                  <RadioButton fx:id="rdMale" mnemonicParsing="false" onMouseClicked="#handleChooseGenderMale" text="Male" textFill="#fa2d59">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Female%20Doctor.png" />
+                     </image>
+                  </ImageView>
+                  <RadioButton fx:id="rdFemale" mnemonicParsing="false" onMouseClicked="#handleChooseGenderFemale" text="Female" textFill="#fa2d59">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="477.0" layoutY="250.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Date&amp;Time.png" />
+                     </image>
+                  </ImageView>
+                  <DatePicker fx:id="datBirhdate" cache="true" prefHeight="35.0" prefWidth="250.0" promptText="birthdate" stylesheets="@../CSS/datePicker.css" />
+               </children>
+            </HBox>
+            <Button fx:id="btnUpdate" layoutX="490.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#handleUpdateButton" prefHeight="30.0" prefWidth="120.0" text="Update">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClear" layoutX="667.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#clearText" prefHeight="30.0" prefWidth="120.0" text="Clear">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tblDoctorInfo" layoutX="35.0" layoutY="388.0" onMouseClicked="#handleLoadData" prefHeight="305.0" prefWidth="1188.0">
+               <columns>
+                  <TableColumn fx:id="tblID" maxWidth="120.0" minWidth="100.0" prefWidth="60.0" text="ID" />
+                  <TableColumn fx:id="tblName" maxWidth="120.0" minWidth="100.0" prefWidth="60.0" text="Name" />
+                  <TableColumn fx:id="tblSalary" maxWidth="120.0" minWidth="100.0" prefWidth="60.0" text="Salary" />
+                  <TableColumn fx:id="tblShiftStart" maxWidth="120.0" minWidth="100.0" prefWidth="60.0" text="Shift Start" />
+                  <TableColumn fx:id="tblShiftEnd" maxWidth="120.0" minWidth="100.0" prefWidth="60.0" text="shift End" />
+                  <TableColumn fx:id="tblGender" maxWidth="120.0" minWidth="100.0" prefWidth="60.0" text="Gender" />
+                  <TableColumn fx:id="tblbirhDate" maxWidth="120.0" minWidth="100.0" prefWidth="60.0" text="Birhdate" />
+                  <TableColumn fx:id="tblgrade" maxWidth="120.0" minWidth="100.0" prefWidth="60.0" text="Grade" />
+                  <TableColumn fx:id="tblDepartment" maxWidth="120.0" minWidth="100.0" prefWidth="60.0" text="Department" />
+                  <TableColumn fx:id="tblAddress" maxWidth="283.0" minWidth="100.0" prefWidth="283.0" text="Address" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="AnchorPane" fx:id="mainPane" layoutX="-535.0" layoutY="214.0" prefHeight="330.0" prefWidth="330.0" style="-fx-background-color: #393351;">
+         <children>
+            <Circle fill="#e9e9e8" layoutX="165.0" layoutY="180.0" radius="108.0" stroke="#e9e9e8" strokeType="INSIDE" style="-fx-fill: #2f2b43;" />
+            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="330.0" spacing="10.0" style="-fx-background-color: #Fa2C56;">
+               <children>
+                  <Text fx:id="ho" onMouseClicked="#SethoursFlag" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="24.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="24.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+                  <Text fx:id="mi" onMouseClicked="#SetminutesFlag" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="24.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+                  <Text fx:id="AM" onMouseClicked="#setLocalAM" strokeType="OUTSIDE" strokeWidth="0.0" text="AM">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="24.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+                  <Text fx:id="PM" onMouseClicked="#setLocalPM" strokeType="OUTSIDE" strokeWidth="0.0" text="PM">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="24.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+               </children>
+            </HBox>
+            <Pane fx:id="p1" layoutX="201.0" layoutY="94.0" onMouseClicked="#click1" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p2" layoutX="227.0" layoutY="124.0" onMouseClicked="#click2" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p3" layoutX="236.0" layoutY="172.0" onMouseClicked="#click3" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p4" layoutX="216.0" layoutY="211.0" onMouseClicked="#click4" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p5" layoutX="186.0" layoutY="237.0" onMouseClicked="#click5" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p6" layoutX="148.0" layoutY="252.0" onMouseClicked="#click6" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p12" layoutX="148.0" layoutY="79.0" onMouseClicked="#click12" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="4.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p7" layoutX="98.0" layoutY="237.0" onMouseClicked="#click7" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p8" layoutX="75.0" layoutY="202.0" onMouseClicked="#click8" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p9" layoutX="65.0" layoutY="166.0" onMouseClicked="#click9" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p10" layoutX="75.0" layoutY="127.0" onMouseClicked="#click10" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="5.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="p11" layoutX="98.0" layoutY="94.0" onMouseClicked="#click11" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="4.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button layoutX="233.0" layoutY="283.0" mnemonicParsing="false" onMouseClicked="#setTime" style="-fx-background-color: #Fa2C56;" text="Set Time" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
